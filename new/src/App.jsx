@@ -1,14 +1,19 @@
 import { useState } from "react";
 import Counter from './Counter.jsx';
 import "./App.css";
-import Button from "./Button.jsx";
+import Desc from "./Desc.jsx";
+
 function App() {
   
 const [count,setCount]= useState(1);
+const increment= ()=>{
+  setCount(count+1)
+}
   return (
     <div className="mainDiv">
       <Counter count1={count}/>
-      <Button/>
+     <button onClick={increment}>go</button>
+     <Desc/>
     </div>
   );
 }
